@@ -1,6 +1,6 @@
 :root {
-  --red: #e50914;
-  --black: #141414;
+  --vermelho: #e50914;
+  --preta: #141414;
 }
 
 * {
@@ -8,24 +8,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /*elementos base*/
 body {
-  background: var(--black);
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: var(--preta);
+  font-family: 'Arial', Times, serif;
   color: white;
 }
 
 header .container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
 header .logo {
   margin-left: 5px;
-  color: var(--red);
-  font-family: 'Arial Black';
+  color: var(--vermelho);
+  font-family: 'Arial Black', Times;
   font-size: 40px;
 }
 
@@ -34,17 +35,18 @@ header nav a {
   color: #aaa;
   margin-right: 10px;
 }
+
 header nav a:hover {
   color: #fff;
 }
 
 /*filme principal*/
 .filme-principal {
-  font-size: 16;
+  font-size: 16px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
     url('/img/bandofbrothers.jpg');
 
-  height: 300px;
+  height: 400px;
   background-size: cover;
 
   display: flex;
@@ -61,8 +63,7 @@ header nav a:hover {
 .filme-principal .titulo {
   margin-top: 15%;
   font-size: 40px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 
 .btn {
@@ -71,8 +72,9 @@ header nav a:hover {
   color: white;
 
   padding: 15px 30px;
-  margin-right: 12px;
+  margin-right: 15px;
   font-size: 12px;
+
   cursor: pointer;
   transition: 0.3s ease all;
 }
@@ -83,5 +85,24 @@ header nav a:hover {
 }
 
 .btn i {
-  margin-right: 5px;
+  margin-right: 8px;
+}
+
+.container {
+  margin-left: 20px;
+}
+
+.filme-principal .container {
+  width: 70%;
+}
+
+.box-filme {
+  height: 100%;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.carrosel-filmes {
+  margin-top: 5px;
 }
